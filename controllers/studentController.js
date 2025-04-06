@@ -56,7 +56,7 @@ const loginStudent = async (req, res) => {
 
         res.json({ token, studentId: student._id });
     } catch (error) {
-        console.error("🚨 Server Error:", error);
+        console.error(" Server Error:", error);
         res.status(500).json({ message: "Server Error", error });
     }
 };
@@ -65,7 +65,7 @@ const getStudentsByTeacher = async (req, res) => {      // new
     try {
         const { teacherId } = req.params;
 
-        // 🛠 Debugging - Print teacherId
+        //  Debugging - Print teacherId
         console.log(" Fetching students for teacher:", teacherId);
 
         const students = await Student.find({ teacherId });
@@ -96,15 +96,12 @@ const getStudentDetails = async (req, res) => {
 
         res.json(student);
     } catch (error) {
-        console.error("❌ Error fetching student details:", error);
+        console.error(" Error fetching student details:", error);
         res.status(500).json({ message: "Server Error" });
     }
 };
 
 module.exports = { addStudent, loginStudent, getStudentDetails, getStudentsByTeacher  };
 
-// Route in Express
-//router.get("/student/:studentId", getStudentDetails);
-//  Export both functions
-// module.exports = { addStudent, loginStudent };
+
 
