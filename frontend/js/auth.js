@@ -27,11 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
      // Teacher Login
      document.addEventListener("DOMContentLoaded", () => {
-        const loginForm = document.getElementById("teacherLoginForm"); // ✅ Corrected ID
+        const loginForm = document.getElementById("teacherLoginForm"); //  Corrected ID
     
         if (!loginForm) {
-            console.error("❌ teacherLoginForm not found! Check your HTML file.");
-            return;  // 🚀 Stop execution if form is missing
+            console.error(" teacherLoginForm not found! Check your HTML file.");
+            return;  //  Stop execution if form is missing
         }
     
         async function loginTeacher(event) {
@@ -48,22 +48,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
     
                 const data = await response.json();
-                console.log("✅ API Response:", data);
+                console.log(" API Response:", data);
     
                 if (!response.ok) {
                     throw new Error(data.message || "Login failed");
                 }
     
-                // ✅ Save token & teacherId
+                //  Save token & teacherId
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("teacherId", data.teacherId);  
     
                 console.log("🔹 Stored teacherId:", localStorage.getItem("teacherId"));
                 console.log("🔹 Stored token:", localStorage.getItem("token"));
     
-                window.location.href = "teacherDashboard.html";  // ✅ Redirect
+                window.location.href = "teacherDashboard.html";  //  Redirect
             } catch (error) {
-                console.error("❌ Error logging in:", error);
+                console.error(" Error logging in:", error);
                 alert(error.message);
             }
         }
