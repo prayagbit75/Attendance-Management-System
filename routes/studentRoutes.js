@@ -4,11 +4,11 @@ const { protect } = require("../middleware/authMiddleware");
 
 const router = express.Router();
 
-// ✅ Fix: Move this route above `/:teacherId`
+// Fix: Move this route above `/:teacherId`
 // router.get("/student/:studentId", getStudentDetails); 
 router.get("/student/:studentId", getStudentDetails);  
 
-// ✅ Get students by teacher ID
+//  Get students by teacher ID
 router.get("/teacher/:teacherId", getStudentsByTeacher);
 
 //  Student Registration (Only Teachers can add students)
