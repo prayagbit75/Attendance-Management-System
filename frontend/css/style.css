@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff4e50, #1f3bff);
+    color: white;
+    text-align: center;
+}
+
+.hero-section {
+    width: 100%;
+    padding: 50px;
+}
+
+.content {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.gradient-btn {
+    background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0);
+    background-size: 300%;
+    animation: gradientMove 6s infinite linear;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    width: 200px;
+    text-align: center;
+}
+
+.gradient-btn:hover {
+    transform: scale(1.05);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

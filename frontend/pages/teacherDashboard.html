@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Teacher Dashboard</h2>
+        <button class="gradient-btn" onclick="logout()">Logout</button>
+
+        <h3>Mark Attendance</h3>
+        <!-- ✅ One Date Picker for All Students -->
+        <input type="date" id="attendanceDate">
+
+        <h3>Student List</h3>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mark Attendance</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <!-- <button class="gradient-btn" onclick="showAddStudentForm()">Add Student</button> -->
+
+        <div id="addStudentForm" class="hidden">
+            <h3>Add Student</h3>
+            <input type="text" id="studentName" placeholder="Student Name" required>
+            <input type="email" id="studentEmail" placeholder="Student Email" required>
+            <input type="text" id="studentSubject" placeholder="Student Subject" required>
+            <input type="text" id="parentPhone" placeholder="Student parent Phone" required>
+            <input type="password" id="studentPassword" placeholder="Password" required>
+
+            <button onclick="addStudent()" class="gradient-btn">Add</button>
+        </div>
+    </div>
+
+    <script src="../js/teacherDashboard.js" type="text/javascript"></script>      
+</body>
+</html>
